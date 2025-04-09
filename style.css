@@ -1,58 +1,134 @@
-/* Βασικές ρυθμίσεις */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+/* Στυλ για το container */
+.container {
+  max-width: 90%; /* Μέγιστο πλάτος */
+  margin: 0 auto; /* Κεντράρισμα του container */
+  padding: 0 20px; /* Εσωτερικό padding για να μην είναι κολλημένο στα πλάγια */
+  box-sizing: border-box; /* Συμπερίληψη του padding στο συνολικό πλάτος */
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Στυλ για το container των projects */
+#projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive στήλες */
+  gap: 20px; /* Απόσταση μεταξύ των στοιχείων */
+  padding: 0;
+  list-style: none;
+}
+
+/* Στυλ για κάθε project */
+#projects ul li {
+  background: #f9f9f9; /* Ανοιχτόχρωμο φόντο */
+  border: 2px solid #ccc; /* Πλαίσιο γύρω από κάθε project */
+  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ελαφριά σκιά */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Εφέ hover */
   
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header στυλ */
-  header {
-    background: #614caf;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-  }
-  
-  /* Section στυλ */
-  section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  section h2 {
-    margin-bottom: 15px;
-    color: #614caf;
-  }
-  
-  section p, section ul {
-    font-size: 1rem;
-    
-  }
-  
-  section ul {
-    list-style: dis
-  
+}
+
+#projects ul li:hover {
+  transform: translateY(-5px); /* Ελαφριά ανύψωση στο hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Εντονότερη σκιά στο hover */
+}
+
+/* Στυλ για τα iframe και τα video */
+.project-frame, .project-video {
+  width: 100%; /* Πλήρες πλάτος μέσα στο container */
+  height: auto; /* Αυτόματο ύψος για να προσαρμόζεται */
+  border: none; /* Αφαίρεση περιγράμματος */
+  border-radius: 5px; /* Ελαφρώς στρογγυλεμένες γωνίες */
+  margin-top: 10px;
+  aspect-ratio: 16 / 9; /* Διατήρηση αναλογίας 16:9 για τα πολυμέσα */
+}
+/* Στυλ για όλα τα links */
+a {
+  color: #007BFF; /* Μπλε χρώμα για τα links */
+  text-decoration: none; /* Αφαίρεση υπογράμμισης */
+  font-weight: bold; /* Έντονη γραφή */
+  transition: color 0.3s, text-shadow 0.3s; /* Εφέ μετάβασης */
+}
+
+a:hover {
+  color: #0056b3; /* Σκούρο μπλε στο hover */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Εφέ λάμψης στο hover */
+}
+
+/* Στυλ για τα links στον footer */
+footer ul li a {
+  color: #fff; /* Λευκό χρώμα για τα links στον footer */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer ul li a:hover {
+  color: #007BFF; /* Μπλε χρώμα στο hover */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Εφέ λάμψης */
+}
+
+/* Στυλ για τα links που μοιάζουν με κουμπιά */
+a.button-link {
+  display: inline-block;
+  background: #007BFF; /* Μπλε φόντο */
+  color: #fff; /* Λευκό κείμενο */
+  padding: 10px 20px; /* Εσωτερικό padding */
+  border-radius: 5px; /* Στρογγυλεμένες γωνίες */
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.3s; /* Εφέ μετάβασης */
+}
+
+a.button-link:hover {
+  background: #0056b3; /* Σκούρο μπλε στο hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Εφέ σκιάς στο hover */
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}

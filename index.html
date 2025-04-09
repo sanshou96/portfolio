@@ -4,38 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css?ver=1">
+  <link rel="stylesheet" href="style.css?ver=1.1">
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my personal web development portfolio!</p>
-  </header>
- 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://gspromitheas.gr/index.php">www.gspromitheas.gr</a><br> A commercial website for a martial arts academy, created with vanilla html,
-         css and javascript. Also, used wordpress for the academy's blogspot and photo album.<br>
-        <iframe src="https://gspromitheas.gr/index.php" width="100%" max-width="600" height="400" style="border:1px solid #000;"></iframe></li>
-      <div class="ourprogramms inner">
-        <div class="programms">
-         
-            <div class="programms">
-              <li><p >Ethereum DApp</p> A DApp (Decentralized Application) for my University Thesis, created with vanilla html,
-                css, Solidity and a bit of Js. You can read more about my thesis in greek <a target="_blank" href="https://polynoe.lib.uniwa.gr/xmlui/bitstream/handle/11400/678/eee_50106729.pdf?sequence=2&isAllowed=y"> here</a> 
-                <br>  <video src="./DApp demo.mp4"controls width="100%" max-width="600" height="400" style="border:1px solid #000;"></video></li>
-             
-              
 
-            </div>
-        </div>
-    </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Welcome to My Portfolio</h1>
+<p>Explore my journey as a web developer, showcasing my projects
+   and skills in creating impactful digital experiences. </p>  
+      <p>My name is Dimitris Karslidis, and I am a web developer with a passion for creating innovative solutions.</p>
+      <p>With a strong foundation in HTML, CSS, and JavaScript, I strive to deliver high-quality work that meets the needs of my clients.</p>
+    </header>
+    <div class="container">
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <a href="https://gspromitheas.gr/index.php">www.gspromitheas.gr</a><br>
+          A commercial website for a martial arts academy, created with vanilla HTML, CSS, and JavaScript. 
+          <iframe src="https://gspromitheas.gr/index.php" width="100%" height="400" class="project-frame" title="Martial Arts Academy Website"></iframe>
+        </li>
+        <li>
+          <p>Ethereum DApp</p>
+          A DApp (Decentralized Application) for my University Thesis, created with vanilla HTML, CSS, Solidity, and JavaScript. 
+          <a target="_blank" href="https://polynoe.lib.uniwa.gr/xmlui/bitstream/handle/11400/678/eee_50106729.pdf?sequence=2&isAllowed=y">Read more (in Greek)</a>
+          <video src="./DApp demo.mp4" controls width="100%" height="400" class="project-video" title="DApp Demo"></video>
+        </li>
+      </ul>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:dimitriskarslidis@hotmail.gr">dimitriskarslidis@hotmail.gr</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Dimitris Karslidis. All rights reserved.</p>
+    <ul>
+      <li><a href="https://github.com/sanshou96" target="_blank">GitHub</a></li>
     </ul>
-  </section>
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:dimitriskarslidis@hotmail.gr">dimitriskarslidis@hotmail.gr</a></p>
-  </section>
+  </footer>
 </body>
 </html>
